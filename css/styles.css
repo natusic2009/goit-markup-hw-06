@@ -175,7 +175,7 @@ a {
   background-color: var(--accent-color);
   border-radius: 2px;
   opacity: 0;
-  transition: opacity 2250ms var(--timing-func);
+  transition: opacity 250ms var(--timing-func);
 }
 
 .nav-link-current::after {
@@ -247,7 +247,7 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--main-background-color);
   width: 696px;
 }
 .button {
@@ -332,7 +332,7 @@ a {
 }
 
 .img-item {
-  background: #ffffff;
+  background: var(--main-background-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -371,7 +371,7 @@ a {
   background-color: rgba(47, 48, 58, 0.8);
 }
 .team-card {
-  background: #ffffff;
+  background: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -531,6 +531,7 @@ a {
 }
 .socials-block {
   display: flexbox;
+  margin-right: 70px;
 }
 .come-over {
   font-weight: 700;
@@ -576,7 +577,7 @@ button {
 .btn:hover,
 .btn:focus {
   color: var(--main-background-color);
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-color 250ms var(--timing-func), color 250ms var(--timing-func);
 }
@@ -697,6 +698,64 @@ button {
   transition: background-color 250ms var(--timing-func);
   border-radius: 50%;
 }
+.footer-form-group {
+  margin-left: auto;
+}
+.footer-form-title {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+  margin-bottom: 20px;
+}
+.footer-form-field {
+  display: inline-block;
+ }
+ .footer-form-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  color: var(--title-text-color);
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.footer-form-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  gap: 10px;
+  margin-left: 12px;
+  padding: 10px 28px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: var(--main-background-color);
+  transition: background-color 250ms var(--timing-func);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: #165f9a;
+}
+
+
+.footer-form-input::placeholder {
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* modal window */
 .backdrop {
   position: fixed;
   top: 0;
@@ -728,6 +787,7 @@ button {
   height: 581px;
   background-color: var(--main-background-color);
   border-radius: 4px;
+  padding: 40px;
 }
 
 .modal-btn {
@@ -755,5 +815,165 @@ button {
 .modal-btn:hover,
 .modal-btn:focus {
   color: var(--main-background-color);
+  background-color: var(--accent-color);
+}
+
+
+
+.feedback-form-title {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.feedback-form-field {
+  display: block;
+  position: relative;
+}
+
+.feedback-form-field:nth-child(-n + 3) {
+  margin-bottom: 10px;
+}
+
+.feedback-form-field:last-child {
+  margin-bottom: 20px;
+}
+
+.feedback-form-name {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--main-text-color);
+}
+
+.feedback-form-input {
+  display: block;
+  width: 100%;
+  outline: none;
+  padding: 12px 42px;
+  margin-bottom: 10px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 14px;
+
+  transition: border-color 250ms var(--timing-func);
+}
+.feedback-form-input:last-child {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+.feedback-form-input:last-child::placeholder {
+  letter-spacing: 0.01em;
+  color: var(--main-text-color);
+}
+
+.feedback-form-input:focus,
+.feedback-form-input:hover {
+  border-color: var(--accent-color);
+}
+
+.feedback-form-input:focus ~ .feedback-icon,
+.feedback-form-input:hover ~ .feedback-icon {
+  fill: var(--accent-color);
+}
+
+.feedback-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  fill: currentColor;
+  transition: fill 250ms var(--timing-func);
+}
+
+.feedback-checkbox-field {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.feedback-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.feedback-checkbox-text {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+.feedback-checkbox-field {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-checkbox + .feedback-checkbox-icon .icon-checked {
+  opacity: 0;
+  transition: opacity 250ms var(--timing-func);
+}
+
+.feedback-checkbox:checked + .feedback-checkbox-icon .icon-unchecked {
+  opacity: 0;
+}
+
+.feedback-checkbox:checked + .feedback-checkbox-icon .icon-checked {
+  opacity: 1;
+}
+
+.icon-unchecked {
+  transition: opacity 250ms var(--timing-func);
+}
+
+.feedback-link {
+  color: var(--accent-color);
+  transition: color 250ms var(--timing-func);
+}
+
+.feedback-link:hover,
+.feedback-link:focus {
+  color: var(--accent-color);
+}
+
+.feedback-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 52px;
+
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--main-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  transition: background-color 250ms var(--timing-func);
+}
+
+.feedback-btn:hover,
+.feedback-btn:focus {
   background-color: var(--accent-color);
 }
